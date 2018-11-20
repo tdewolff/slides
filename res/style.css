@@ -1,0 +1,97 @@
+@font-face {
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: 400;
+    src: url(Arimo-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: 700;
+    src: url(Arimo-Bold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: Arimo;
+    font-style: italic;
+    font-weight: 400;
+    src: url(Arimo-Italic.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: Arimo;
+    font-style: italic;
+    font-weight: 700;
+    src: url(Arimo-BoldItalic.woff2) format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    margin:0;
+    font-family: Arimo, sans-serif;
+    font-size: 2vw;
+}
+
+#index {
+}
+
+#slides {
+    background: #444;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0;
+    transition: margin-left 0.4s;
+}
+
+.slide {
+    min-width: 70vw;
+    max-width: 70vw;
+    min-height: calc(70vw * 9/16);
+    max-height: calc(70vw * 9/16);
+    margin: 2.5vw;
+    padding: 2em;
+    background: white;
+    box-shadow: 0 0 50px black;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide:first-of-type {
+    margin-left: 15vw;
+}
+
+.slide:last-of-type {
+    margin-right: 15vw;
+}
+
+.slide.title h1:first-of-type {
+    margin-top: 1em;
+}
+
+.slide-content {
+    transform-origin: top left;
+}
+
+.slide-content > *:first-child {
+    margin-top: 0;
+}
+
+.slide-number {
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.3em;
+    font-size: 80%;
+}
